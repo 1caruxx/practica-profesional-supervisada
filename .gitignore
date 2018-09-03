@@ -1,35 +1,35 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
-proyecto/*~
-proyecto/*.sw[mnpcod]
-proyecto/*.log
-proyecto/*.tmp
-proyecto/*.tmp.*
-proyecto/log.txt
-proyecto/*.sublime-project
-proyecto/*.sublime-workspace
-proyecto/.vscode/
-proyecto/npm-debug.log*
+*~
+*.sw[mnpcod]
+*.log
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+.vscode/
+npm-debug.log*
 
-proyecto/.idea/
-proyecto/.ionic/
-proyecto/.sourcemaps/
-proyecto/.sass-cache/
-proyecto/.tmp/
-proyecto/.versions/
-proyecto/coverage/
-proyecto/dist/
-proyecto/node_modules/
-proyecto/tmp/
-proyecto/temp/
-proyecto/platforms/
-proyecto/plugins/
-proyecto/plugins/android.json
-proyecto/plugins/ios.json
-proyecto/www/
-proyecto/$RECYCLE.BIN/
+.idea/
+.ionic/
+.sourcemaps/
+.sass-cache/
+.tmp/
+.versions/
+coverage/
+dist/
+node_modules/
+tmp/
+temp/
+platforms/
+plugins/
+plugins/android.json
+plugins/ios.json
+www/
+$RECYCLE.BIN/
 
-proyecto/.DS_Store
-proyecto/Thumbs.db
-proyecto/UserInterfaceState.xcuserstate
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
