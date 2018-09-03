@@ -1,12 +1,17 @@
 # ![Logo](./Z._img/icon.png) Introduccion a Ionic
 
+[Ionic](https://ionicframework.com/) es un framework front-end que permite la creacion de aplicaciones hibridas para dispositivos mobiles. Estas aplicaciones
+estaran escritas en HTML, CSS y Typescript.
+
 ## Tabla de contenidos
 
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Instalacion y primeros pasos](#instalacion-y-primeros-pasos)
 * [Tipos de aplicaciones moviles](#tipos-de-aplicaciones-moviles)
+* [Como crear una aplicacion nativa a partir de un proyecto de Ionic](#como-crear-una-aplicacion-nativa-a-partir-de-un-proyecto-de-ionic)
 * [Estructura de un proyecto](#estructura-de-un-proyecto)
     * [El directorio src](#el-directorio-src)
+* [Profesores](#profesores)
 
 ## Tecnologias utilizadas
 
@@ -33,8 +38,7 @@
 
 ## Instalacion y primeros pasos
 
-[Ionic](https://ionicframework.com/) es un framework front-end que permite la creacion de aplicaciones hibridas para dispositivos mobiles. Estas aplicaciones
-estaran escritas en HTML, CSS y Typescript. Para su instalacion, sera necesario el uso del [gestor de paquetes de node](https://nodejs.org/es/) (node package manager o NPM).<br/>
+Para su instalacion, sera necesario el uso del [gestor de paquetes de node](https://nodejs.org/es/) (node package manager o NPM).<br/>
 Para instalar el framework, se debera lanzar el siguiente comando en cualquier terminal, no importa donde se este posicionado:
 
 ```
@@ -48,7 +52,13 @@ ionic --version
 ionic -v
 ```
 
-El primer comando retornara la version instalada de ionic, el segundo hara lo mismo pero a su vez proporcionara un listado de comandos globales. El sistema de versionado de ionic es semantico al igual que el de angular. Esto quiere decir que cada version de ionic esta compuesta por tres numeros (X.X.X). Cada numero representa el grado de cambio que hay de una version a otra. El primer numero se le denomina "mayor" y representa una nueva version en el que el cambio puede presentar incompatibilidades en proyectos trabajados en versiones anteriores del framework. El segundo numero, conocido como "minor", representa una version a la cual se le añaden nuevas funciones, pero que no deberian presentar incompatibilades con las versiones anteriores. Finalmente, el tercer y ultimo numero, llamado "path" representa una version en la cual se corrigieron errores.<br/>
+El primer comando retornara la version instalada de ionic CLI, el segundo hara lo mismo pero a su vez proporcionara un listado de comandos globales. Si se desea ver la version instalada de ionic:
+
+```
+ionic info
+```
+
+El sistema de versionado de ionic es semantico al igual que el de angular. Esto quiere decir que cada version de ionic esta compuesta por tres numeros (X.X.X). Cada numero representa el grado de cambio que hay de una version a otra. El primer numero se le denomina "mayor" y representa una nueva version en el que el cambio puede presentar incompatibilidades en proyectos trabajados en versiones anteriores del framework. El segundo numero, conocido como "minor", representa una version a la cual se le añaden nuevas funciones, pero que no deberian presentar incompatibilades con las versiones anteriores. Finalmente, el tercer y ultimo numero, llamado "path" representa una version en la cual se corrigieron errores.<br/>
 Por esta razon es recomendable no actualizar la version del framework mientras se este trabajando sobre un proyecto o por lo menos no sin hacer previamente una copia de seguridad.<br/>
 Para crear un nuevo proyecto de ionic:
 
@@ -61,7 +71,8 @@ La plantilla o template sera una vista creada por defecto que podra ser visualiz
 ```
 ionic serve
 ```
-Este comando permitira ejecutar la aplicacion en un servidor local. Se debera lanzarlo estando posicionado en la carpeta de un proyecto de ionic en la consola de comandos. Automaticamente se abrira el navegador por defecto en el caso de que no este abierto y se podra visualizar la aplicacion. Antes de ser cargada la pagina en el navegador, se realiza un proceso de compilacion para que el proyecto tenga una estructura estandarizada que los navegadores puedan interpretar. Esa version del proyecto compilada, es la que sirve el framework al navegador.
+Este comando permitira ejecutar la aplicacion en un servidor local. Se debera lanzarlo estando posicionado en la carpeta de un proyecto de ionic en la consola de comandos. Automaticamente se abrira el navegador por defecto en el caso de que no este abierto y se podra visualizar la aplicacion. Antes de ser cargada la pagina en el navegador, se realiza un proceso de compilacion para que el proyecto tenga una estructura estandarizada que los navegadores puedan interpretar. Esa version del proyecto compilada, es la que sirve el framework al navegador.<br/>
+Este comando a su vez tiene una bandera especial que es `--lab` que permitira visualizar la aplicacion en varios sistemas operativos, siempre dentro de un servidor local ejecutado en el navegador por defecto.
 
 ## Tipos de aplicaciones moviles
 
@@ -71,7 +82,7 @@ Este comando permitira ejecutar la aplicacion en un servidor local. Se debera la
 
 ## Como crear una aplicacion nativa a partir de un proyecto de Ionic
 
-Para crear una aplicacion nativa a partir de un proyecto creado con el framework Ionic, sera necesario adquirir las siguiente herramientas:
+Para crear una aplicacion nativa a partir de un proyecto creado con el framework Ionic, sera necesario adquirir las siguientes herramientas:
 * **JDK:** Que por sus siglas, significa <i>"Java Development Kit"</i> (kit de desarollo de java). Esta herramienta o conjunto de herramientas es precisada por Cordova para traspilar el codigo y transformarlo en una aplicacion nativa. JDK puede ser descargado a traves del siguiente [enlace](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). Al momento de instalar este kit de desarollo, se tendra que tener muy en cuenta la ubicacion donde es instalado por que se necesitara para crear una variable de entorno.<br/>
 Cordova por defecto buscara las herramientas de JDK que precise segun la ubicacion que este almacenada en la variable de entorno `JAVA_HOME`. Esta variable no existe, por lo que sera necesario crearla previamente para ello (en Windows), se debe ir a Este equipo > Propiedades > Configuracion avanzada del sistema > Variables de entorno... y se creara una nueva variable del sistema. El nombre de esta debe ser exactamente *JAVA_HOME* y su valor sera la ruta donde se encuentran todos los archivos que conforman JDK, en mi caso, seria la siguiente ruta: `D:\Archivos de programa\Java\jdk1.8.0_181`.<br/>
 El ultimo paso seria modificar la variable de entorno `Path` de las variables de sistema a la que se le debe añadir la sentencia `%JAVA_HOME\bin%`. Si todo salio correcto, al lanzar el comando `javac -version` se deberia poder ver la version del JDK actualmente instalado. Javac es el compilador encargado de transformar el codigo fuente a una version que podra interpretarse en cualquier plataforma.<br/>
