@@ -20,11 +20,11 @@ estaran escritas en HTML, CSS y Typescript.
 <table>
     <tbody>
         <tr>
-            <td><img src="./Z._img/vs.ico" width="20px" height="20px"/></td>
+            <td><img src="./Z._img/vs-code.png" width="20px" height="20px"/></td>
             <td><a href="https://code.visualstudio.com/">Visual Studio Code</a></td>
         </tr>
         <tr>
-            <td><img src="./Z._img/ionic.png" width="20px" height="20px"/></td>
+            <td><img src="./Z._img/icon.png" width="20px" height="20px"/></td>
             <td><a href="https://ionicframework.com/">Ionic (v3.9.2)</a></td>
         </tr>
         <tr>
@@ -79,7 +79,7 @@ ionic start <nombre-del-proyecto> <plantilla>
 La plantilla o template sera una vista creada por defecto que podra ser visualizada en el navegador o en cualquier otra parte. Si no se coloca la plantilla, se imprimira por consola un listado de las plantillas que ionic ofrece.<br/>
 Si durante la creacion de un nuevo proyecto, surge un error durante la ejecucion del comando `npm i`, cambiar el registro de donde npm chequea la lista de paquetes puede solucionarlo:
 
-```
+```bash
 npm config set registry https://registry.npmjs.com/
 # Por defecto es https://registry.npmjs.org/
 ```
