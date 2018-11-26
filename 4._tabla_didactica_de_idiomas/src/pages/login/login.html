@@ -1,0 +1,26 @@
+<img class="background" src="../../assets/imgs/background.jpg"/>
+<div class="vertical-container" >
+  
+  <div class="horizontal-container">
+    <div class="header">
+      <img src="../../assets/imgs/logo.png" class="tada" [class]="animation">
+      <h1>
+        Inicio
+      </h1>
+    </div>
+
+    <input type="text" placeholder="Ejemplo@outlook.com"  [(ngModel)]="email" />
+    <input type="password" placeholder="******" [(ngModel)]="password" />
+    <button ion-button color="red" (click)="Login()" [disabled]="estadoBoton">
+      <ion-icon name="md-arrow-round-forward"></ion-icon>
+    </button>
+
+    <div class="botones">
+      <button ion-button color="red" (click)="SetearUsuario('usuario@gmail.com', '333333')"><img src="../../assets/imgs/user.svg" /></button>
+      <button ion-button color="red" (click)="SetearUsuario('admin@gmail.com', '111111')"><img src="../../assets/imgs/user-tie.svg" /></button>
+      <button ion-button color="red" (click)="SetearUsuario('invitado@gmail.com', '222222')"><img src="../../assets/imgs/user-tag.svg" /></button>
+      <button ion-button color="red" (click)="SetearUsuario('anonimo@gmail.com', '444444')"><img src="../../assets/imgs/user-secret.svg" /></button>
+      <button ion-button color="red" (click)="SetearUsuario('tester@gmail.com', '555555')"><img src="../../assets/imgs/bug.svg" /></button>
+    </div>
+  </div>
+</div>
